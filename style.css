@@ -26,10 +26,11 @@ body
 
 .item-outer
 {
+    display: contents;
     text-align: center;
 }
 
-.item-inner
+.item
 {
     width: var(--image-size);
     display: inline-block;
@@ -41,7 +42,7 @@ body
 }
 
 
-.item-inner:hover .item-image-container {
+.item:hover .item-image-container {
     transform: scale(var(--clear-image-scale));
 }
 
@@ -69,7 +70,7 @@ body
     will-change: transform;
 }
 
-.item-inner:hover .item-image-container::after {
+.item:hover .item-image-container::after {
     opacity: 1;
 }
 
