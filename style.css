@@ -1,15 +1,15 @@
 :root {
     /* These variables are easily changable for customization */
-    --bg-color: #2a3030;
-    --blur: 20px;
-    --image-size: 30vh;
-    --clear-image-scale: 1.1;
-    --transition: 400ms;
-    --text-size: 20pt;
+    --item-bg-color: #2a3030;
+    --item-blur: 20px;
+    --item-image-size: 50vh;
+    --item-clear-image-scale: 1.1;
+    --item-transition: 400ms;
+    --item-text-size: 20pt;
 }
 
 body {
-    background-color: var(--bg-color);
+    background-color: var(--item-bg-color);
 }
 
 .item-outer {
@@ -18,7 +18,7 @@ body {
 }
 
 .item {
-    width: var(--image-size);
+    width: var(--item-image-size);
     display: inline-block;
 }
 
@@ -27,11 +27,11 @@ body {
 }
 
 .item:hover .item-image-container {
-    transform: scale(var(--clear-image-scale));
+    transform: scale(var(--item-clear-image-scale));
 }
 
 .item-image-container {
-    transition: all var(--transition) ease-in-out;
+    transition: all var(--item-transition) ease-in-out;
     will-change: transform;
 }
 
@@ -47,8 +47,8 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    filter: blur(var(--blur));
-    transition: all var(--transition) ease-in-out;
+    filter: blur(var(--item-blur));
+    transition: all var(--item-transition) ease-in-out;
     will-change: transform;
 }
 
@@ -59,7 +59,7 @@ body {
     position: relative;
     top: 0px;
     width: 100%;
-    transition: all var(--transition) cubic-bezier(0.25, 0.75, 0.5, 1.25);
+    transition: all var(--item-transition) cubic-bezier(0.25, 0.75, 0.5, 1.25);
     background-color: var( --item-button-color);
 }
 
@@ -68,7 +68,7 @@ body {
     margin: auto;
     content: var(--item-text);
     font-family: 'Segoe UI';
-    font-size: var(--text-size);
+    font-size: var(--item-text-size);
     color: white;
     font-weight: bold;
 }
