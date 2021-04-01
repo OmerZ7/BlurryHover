@@ -23,6 +23,7 @@ body {
 }
 
 .item-image-container img {
+    width: var(--item-image-size);
     content: var(--item-image);
 }
 
